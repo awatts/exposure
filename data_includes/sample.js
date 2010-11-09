@@ -12,7 +12,9 @@ var defaults = [
         errorMessage: "Wrong. Please wait for the next sentence",
         normalMessage: "Please wait for the next sentence" },
     "RegionedSentence", {
-        mode: "speeded acceptability" },
+        mode: "speeded acceptability",
+        showAhead: true,
+        showBehind: false },
     "Question", {
         randomOrder: false,
         hasCorrect: true,
