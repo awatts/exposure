@@ -8,13 +8,13 @@ var manualSendResults = true;
 
 var defaults = [
     "Separator", {
-        transfer: 1500,
         errorMessage: "Wrong. Please wait for the next sentence",
         normalMessage: "Please wait for the next sentence" },
     "RegionedSentence", {
         mode: "speeded acceptability",
         showAhead: true,
-        showBehind: false },
+        showBehind: false,
+        wordPauseTime: 25 },
     "Question", {
         randomOrder: false,
         hasCorrect: true,

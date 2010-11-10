@@ -100,6 +100,12 @@ $.widget("ui.RegionedSentence", {
             }
         }
 
+        // map a different color for each speaker
+        this.speakercolors = {'S1': 'blue',
+                              'S2': 'red',
+                              'S3': 'green',
+                              'S4': 'purple'};
+
         this.resultsLines = [];
         if (this.mode == "self-paced reading") {
             // Don't want to be allocating arrays in time-critical code.
@@ -251,8 +257,16 @@ $.widget("ui.RegionedSentence", {
     },
     showWord: function(w) {
         if (this.currentWord < this.stoppingPoint) {
-            if (this.showAhead || this.showBehind)
+            if (this.showAhead || this.showBehind) {
                 this.wsnjq[w].style.borderColor = this.shownBorderColor;
+            }
+            // change the text color if this is a new speaker since
+            // the last word
+            var newspkr = this.tags[w].match(/S\d+/);
+            if (newspkr !== null) {
+                this.shownWordColor = this.speakercolors[newspkr];
+            }
+
             this.wsnjq[w].style.color = this.shownWordColor;
         }
     },
