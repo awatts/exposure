@@ -8,8 +8,8 @@ var manualSendResults = true;
 
 var defaults = [
     "Separator", {
-        errorMessage: "Wrong. Please wait for the next sentence",
-        normalMessage: "Please wait for the next sentence" },
+        errorMessage: "Wrong. Please any key for the next sentence",
+        normalMessage: "Press any key for the next sentence" },
     "RegionedSentence", {
         mode: "speeded acceptability",
         showAhead: true,
