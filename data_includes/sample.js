@@ -14,8 +14,8 @@ var defaults = [
         mode: "speeded acceptability",
         showAhead: true,
         showBehind: false,
-        wordTime: 200,
-        wordPauseTime: 25 },
+        wordTime: 230,
+        wordPauseTime: 40 },
     "Question", {
         randomOrder: false,
         hasCorrect: true,
